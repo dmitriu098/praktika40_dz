@@ -1,0 +1,17 @@
+<p>
+  posts works!
+</p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="card" *ngFor="let post of posts" style="width: 18rem;">
+      <div class="card-body">
+        <a routerLink="/posts/{{post.id}}">
+          <h4 class="card-title">{{post.title}}</h4>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
