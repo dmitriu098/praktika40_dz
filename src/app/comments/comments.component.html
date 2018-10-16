@@ -1,0 +1,21 @@
+<p>
+  comments works!
+</p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="card" *ngFor="let com of comment" style="width: 18rem;">
+
+      <div class="card-body">
+        <h5 class="card-title text-capitalize">
+          <span class="text-danger">Title: </span>{{com.name}}</h5>
+        <p class="card-text">{{com.body}}</p>
+        <p class="card-text">Email: <b>{{com.email}}</b></p>
+        <a routerLink="/posts/{{com.postId}}" class="btn btn-primary">Go Post</a>
+        <a routerLink="/posts/" class="btn btn-danger">Go Posts</a>
+
+      </div>
+    </div>
+  </div>
+</div>
