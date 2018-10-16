@@ -1,0 +1,24 @@
+<p>
+  posts-details works!
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="card" *ngIf="post" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{post.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Post Id: {{post.id}}</h6>
+        <p class="card-text">{{post.body}}</p>
+        <p class="d-flex justify-content-center">Author:
+          <a routerLink="/users/{{post.userId}}" class="card-link">{{username}}</a>
+        </p>
+        <p class="d-flex justify-content-center">
+          <a routerLink="/posts/{{post.id}}/comments" class="card-link">Go Comments</a>
+        </p>
+
+
+        <a routerLink="/posts/" class="card-link d-flex justify-content-center">Go Posts</a>
+      </div>
+    </div>
+  </div>
+</div>
